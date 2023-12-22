@@ -1,0 +1,6 @@
+torch==2.1.2+cu121
+pandas==2.0.3
+numpy==1.24.3
+torchvision==0.16.2+cu121
+transformers==4.30.0
+peft==0.7.1
