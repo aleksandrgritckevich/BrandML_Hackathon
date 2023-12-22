@@ -6,10 +6,8 @@ import torch
 from sentence_transformers import SentenceTransformer
 from transformers import AutoTokenizer, AutoModelForSeq2SeqLM, BitsAndBytesConfig
 from peft import PeftModel, LoraConfig, TaskType
-import torchvision
 
 device = "cuda" if torch.cuda.is_available() else "cpu"
-
 
 if __name__ == '__main__':
     type_comments = sys.argv[1]
