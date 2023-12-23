@@ -19,6 +19,8 @@
    
    python3 ./solution.py topic_comments "./dataset.jsonl" "./result.jsonl"
 
+4. Скрипт создаст в этой же папке файл с названием result.json.
+
 **Примечание**:
 
 Я не уверен на 100%, что все запустится :)
