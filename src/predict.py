@@ -31,7 +31,7 @@ def process_data(path):
 def filter_comments(posts_comments,model,min_threshold,max_threshold):
     new_comments = []
     new_hashes = []
-    for i in range(posts_comments.shape[0]):
+    for i in tqdm(range(posts_comments.shape[0])):
         post = posts_comments.iloc[i]["text"]
         comments = posts_comments.iloc[i]["comments"].split("\n")
         hashes = posts_comments.iloc[i]["comments_hash"]
