@@ -1,6 +1,7 @@
 import torch
 import pandas as pd
 import numpy as np
+from tqdm import tqdm
 
 device = "cuda" if torch.cuda.is_available() else "cpu"
 
@@ -72,7 +73,7 @@ def predict(features,model,tokenizer):
     hashes = []
     comments_hashes = []
     with torch.no_grad():
-        for post, hash, comments_hash in features:
+        for post, hash, comments_hash in tqdm(features):
             inputs = torch.tensor(tokenizer(post, truncation=True, max_length=500)["input_ids"])
             predict.append(tokenizer.decode(model.generate(input_ids=inputs.unsqueeze(0).to(device), max_length=100)[0],
                                             skip_special_tokens=True))
