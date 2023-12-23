@@ -17,8 +17,10 @@ if __name__ == '__main__':
         min_threshold, max_threshold = 0.3, 1
     elif type_comments == "post_comments":
         min_threshold, max_threshold = 0.55, 1
-    else:
+    elif type_comments == "topic_comments":
         min_threshold, max_threshold = 0.3, 0.55
+    else:
+        raise ValueError('Значение аргумента должно быть одним из следующих: "all_comments", "post_comments", "topic_comments"')
     # Загружаем и предобрабатываем данные. Оставляем только комменты к посту, т.е. удаляем комменты к комментам.
 
     posts_comments = src.predict.process_data(data_path)
