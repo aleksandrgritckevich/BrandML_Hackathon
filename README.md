@@ -12,7 +12,9 @@
 2. Установите зависимости из файла dependencies.txt
 3. Запускайте в консоли с помощью команд:
    python3 ./solution.py all_comments "./dataset.jsonl" "./result.jsonl"
+   
    python3 ./solution.py post_comments "./dataset.jsonl" "./result.jsonl"
+   
    python3 ./solution.py topic_comments "./dataset.jsonl" "./result.jsonl"
 
 **Примечание**:
