@@ -71,11 +71,11 @@ if __name__ == '__main__':
 
     # Предсказываем саммари на нашем датасете.
 
-    predict, hashes, comments_hashes = src.predict.predict(features,model,tokenizer)
+    prediction, hashes, comments_hashes = src.predict.predict(features,model,tokenizer)
 
     # Сохраняем все в json.
-    to_json = [{"summary": predict[i], "post_hash": hashes[i], "comments_hash": comments_hashes[i]} for i in
-               range(len(predict))]
+    to_json = [{"summary": prediction[i], "post_hash": hashes[i], "comments_hash": comments_hashes[i]} for i in
+               range(len(prediction))]
     with open(json_path, 'w') as f:
         for d in to_json:
             json.dump(d, f)
